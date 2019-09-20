@@ -7,7 +7,6 @@ const target = 'http://localhost:8080'
 
 const devConfig = {
     mode: 'development',
-    entry: [require.resolve('react-dev-utils/webpackHotDevClient'), path.resolve(__dirname, '../src/index.js')],
     plugins: [
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()

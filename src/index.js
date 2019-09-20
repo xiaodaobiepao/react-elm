@@ -8,7 +8,6 @@ import './utils/rem'
 import App from './view/App'
 import createInitStore from './store'
 const store = createInitStore()
-window.stores = store
 
 if ('addEventListener' in document) {
   document.addEventListener('DOMContentLoaded', () => {
@@ -16,13 +15,4 @@ if ('addEventListener' in document) {
   }, false)
 }
 
-
-const render = () => {
-  ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'))
-}
-render()
-// if (module.hot) {
-//   module.hot.accept('./view/App', () => {
-//     render()
-//   })
-// }
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'))
