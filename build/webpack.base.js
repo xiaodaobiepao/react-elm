@@ -2,10 +2,12 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
     entry: path.resolve(__dirname, '../src/index.js'),
     output: {
         path: path.resolve(__dirname, '../dist'),
+        publicPath: process.env.NODE_ENV === 'production' ? '/element' : '/',
         filename: '[name].js',
         chunkFilename: '[name].js'
     },

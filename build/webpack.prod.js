@@ -1,3 +1,4 @@
+process.env.NODE_ENV = 'production'
 const merge = require('webpack-merge')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const baseConfig = require('./webpack.base')

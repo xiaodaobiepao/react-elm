@@ -1,3 +1,4 @@
+process.env.NODE_ENV = 'development'
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base')
 const path = require('path')
