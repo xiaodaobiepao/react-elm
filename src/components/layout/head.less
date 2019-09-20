@@ -1,0 +1,41 @@
+@import '../../style/mixin.less';
+
+.head_top {
+  background-color: @blue;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  .wh(100%, 1.95rem)
+}
+
+.back {
+  left: 0.4rem;
+  .wh(0.6rem, 1rem);
+  line-height: 2.2rem;
+  margin-left: .4rem;
+}
+
+.head_login {
+  .sc(0.6rem, #ffffff);
+  .ct;
+  right: 0.55rem;
+  .login_span {
+    color: #ffffff;
+  }
+  .user_avatar {
+    fill: #ffffff;
+    .wh(0.8rem, 0.8rem);
+  }
+}
+.title_head {
+  .center;
+  width: 50%;
+  color: #ffffff;
+  text-align: center;
+  .title_text {
+    .sc(0.8rem, #ffffff);
+    text-align: center;
+    font-weight: bold;
+  }
+}

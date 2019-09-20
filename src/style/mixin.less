@@ -1,0 +1,59 @@
+@blue: #3190e8;
+@bc: #e4e4e4;
+@fc: #fff;
+
+.bis (@url) {
+  background-image: url(@url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.borderRadius (@radius) {
+  border-radius: @radius;
+}
+
+.allcover {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.cl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.ct {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.wh (@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+.font(@size, @line-height, @family: 'Microsoft YaHei') {
+  font-size: @size;
+  line-height: @line-height;
+  font-family: @family;
+}
+
+.sc (@size, @color) {
+  font-size: @size;
+  color: @color;
+}
+
+.fj (@type: space-between) {
+  display: flex;
+  justify-content: @type;
+}
