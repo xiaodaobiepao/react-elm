@@ -69,7 +69,7 @@ export default class Home extends Component {
         <Head logo={logo} signinUp="home" />
         <nav className="city_nav">
           <div className="city_tip">
-            <span>当前定位城市：</span>
+            <span>当前定位城市s：</span>
             <span>定位不准时，请在城市列表中选择</span>
           </div>
           <Link to={`/city/${guessCityid}`} className="guess_city">
