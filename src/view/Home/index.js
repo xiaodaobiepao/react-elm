@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import { cityGuess, getHotcity, getGroupcity } from '../../service/index'
 import Head from '../../components/layout/head'
 import './home.less'
@@ -63,10 +64,11 @@ export default class Home extends Component {
 
   render() {
     const { guessCityid, guessCity, hotcity, groupcity } = this.state
+    const { history } = this.props
     const logo = (<span className="head_logo" role="button" tabIndex="0" onClick={() => this.reload()}>ele.me</span>)
     return (
       <div>
-        <Head logo={logo} signinUp="home" />
+        <Head history={history} logo={logo} signinUp="home" />
         <nav className="city_nav">
           <div className="city_tip">
             <span>当前定位城市s：</span>
@@ -109,4 +111,12 @@ export default class Home extends Component {
       </div>
     )
   }
+}
+
+Home.propTypes = {
+  history: PropTypes.object,
+}
+
+Home.defaultProps = {
+  history: {},
 }

@@ -1,0 +1,89 @@
+@import '../../style/mixin.less';
+
+.city_container {
+  .form_search {
+    padding: 2.35rem .4rem 0;
+    .label {
+      display: flex;
+      align-items: center;
+    }
+    .label_text {
+      .sc(.32rem, #333);
+      width: 1.866667rem;
+      white-space: nowrap;
+      text-align: center;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      margin-right: .133333rem;
+    }
+    .arrow {
+      .wh(.16rem, .16rem);
+    }
+  }
+  .pois_search_history {
+    border-top: 1px solid @bc;
+    border-bottom: 1px solid @bc;
+    padding-left: 0.5rem;
+    .font(0.475rem, 0.8rem);
+  }
+
+  .getpois_ul {
+    background-color: #ffffff;
+    border-top: 1px solid @bc;
+    li {
+      margin: 0 auto;
+      padding-top: 0.65rem;
+      border-bottom: 1px solid @bc;
+      .pois_name {
+        margin: 0 auto 0.35rem;
+        width: 90%;
+        .sc(0.65rem, #333);
+      }
+      .pois_address {
+        width: 90%;
+        margin: 0 auto 0.55rem;
+        .sc(0.45rem, #999);
+      }
+    }
+  }
+
+  .search_none_place {
+    padding-top: 6rem;
+    .search_box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      img {
+        display: block;
+        width: 5.333333rem;
+      }
+      h3 {
+        .sc(0.65rem, #6a6a6a);
+        font-weight: 400;
+        margin: .333333rem 0 .266667rem;
+      }
+      p {
+        .sc(.306667rem, #999);
+        margin: 0 0 .333333rem;
+      }
+    }
+  }
+
+  .clear_all_history {
+    .sc(0.7rem, #666);
+    text-align: center;
+    line-height: 2rem;
+    background-color: #ffffff;
+  }
+}
+
+@media (max-width: 575px) {
+  .ant-form-item-label, .ant-form-item-control-wrapper {
+    width: 100% * 5 / 6;
+  }
+  .ant-form-item-label {
+    width: 100% / 6;
+    line-height: 40px;
+  }
+}

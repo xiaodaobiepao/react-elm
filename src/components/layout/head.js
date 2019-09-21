@@ -42,7 +42,7 @@ class Head extends Component {
 
   render() {
     const { logo, search, signinUp, headTitle, goBack, edit, msiteTitle, changecity, changeLogin, history, userInfo } = this.props
-    console.log(userInfo.userInfo)
+    console.log(history)
     return (
       <header className="head_top">
         { logo }
@@ -50,9 +50,7 @@ class Head extends Component {
         {
           goBack ? (
             <section className="back" onClick={() => { history.go(-1) }}>
-              <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                <polyline points="12,18 4,9 12,0" style={{ fill: 'none', stroke: 'rgb(255,255,255)', strokeWidth: 2 }} />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 33" className="back-svg"><path fillRule="evenodd" d="M17.655 1.853L15.961.159.033 16.072 15.961 32l1.694-1.694L3.429 16.08 17.655 1.854z" className="path1" data-spm-anchor-id="a2ogi.13147251.0.i3" /></svg>
             </section>
           ) : null
         }

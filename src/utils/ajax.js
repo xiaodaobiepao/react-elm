@@ -10,7 +10,7 @@ class Ajax {
   }
 
   post(url, data) {
-    return this.ajax(url, data)
+    return this.ajax(url, data, 'POST')
   }
 
   async ajax(url = '', data = {}, method = 'GET', type = 'fetch') {

@@ -43,8 +43,9 @@
   },
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "antd": "^3.23.2",
+    "antd": "^3.23.3",
     "fastclick": "^1.0.6",
+    "history": "^4.10.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
