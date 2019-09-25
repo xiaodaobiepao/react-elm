@@ -13,3 +13,20 @@ export function merge(...configs) {
     })
   }
 }
+
+export function parseSearch(url) {
+  const urlObj = {}
+  if (window.URLSearchParams) {
+    const urlQuery = new URLSearchParams(url)
+    Array.from(urlQuery.entries).forEach(item => {
+      urlObj[item[0]] = item[1]
+    })
+    return urlObj
+  }
+  url.slice(1).split('&').forEach(item => {
+    const key = item.split('=')[0]
+    const val = item.split('=')[1]
+    urlObj[key] = val
+  })
+  return urlObj
+}
