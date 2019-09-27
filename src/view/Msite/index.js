@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Head from '../../components/layout/head'
+import { parseSearch } from '../../utils/index'
 
 export default class Msite extends Component {
   constructor(props) {
@@ -17,7 +18,9 @@ export default class Msite extends Component {
 
   componentDidMount() {
     const { location } = this.props
-    console.log(location)
+    this.setState({
+      geohash: parseSearch(location.search),
+    })
   }
 
   render() {

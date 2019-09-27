@@ -1,5 +1,5 @@
 export function merge(...configs) {
-  let obj = {}
+  const obj = {}
   function assignValue(key, val) {
     if (typeof obj[key] === 'object' && typeof val === 'object') {
       obj[key] = merge(obj[key], val)
@@ -19,13 +19,13 @@ export function parseSearch(url) {
   if (window.URLSearchParams) {
     const urlQuery = new URLSearchParams(url)
     Array.from(urlQuery.entries).forEach(item => {
-      urlObj[item[0]] = item[1]
+      const [key, val] = item
+      urlObj[key] = val
     })
     return urlObj
   }
   url.slice(1).split('&').forEach(item => {
-    const key = item.split('=')[0]
-    const val = item.split('=')[1]
+    const [key, val] = item.split('=')
     urlObj[key] = val
   })
   return urlObj
