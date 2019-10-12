@@ -1,6 +1,6 @@
 import * as Types from '../action-types/address'
 
-const initState = []
+const initState = {}
 export default function address(state = initState, action) {
   switch (action.type) {
   case Types.RECORD_ADDRESS:

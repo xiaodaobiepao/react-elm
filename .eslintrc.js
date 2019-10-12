@@ -26,6 +26,7 @@ module.exports = {
         "react/jsx-props-no-spreading": "off",
         "import/prefer-default-export": "off",
         "no-plusplus": "off",
-        "react/no-unused-state": "off"
+        "react/no-unused-state": "off",
+        "camelcase": "off"
     }
 }

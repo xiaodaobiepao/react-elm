@@ -14,7 +14,7 @@ export default class Home extends Component {
       hotcity: [], // 热门城市列表
       groupcity: {}, // 所有城市列表
     }
-    this.initCities = this.initCities.bind(this)
+    // this.initCities = this.initCities.bind(this)
   }
 
   componentDidMount() {
@@ -23,7 +23,7 @@ export default class Home extends Component {
     this.initCities()
   }
 
-  initCities() {
+  initCities = () => {
     console.log(typeof cityGuess)
     cityGuess()
       .then(res => {

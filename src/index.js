@@ -8,6 +8,7 @@ import './utils/rem'
 import App from './view/App'
 import createInitStore from './store'
 const store = createInitStore()
+console.log(store.getState())
 
 if ('addEventListener' in document) {
   document.addEventListener('DOMContentLoaded', () => {

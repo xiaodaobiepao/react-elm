@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+// import { bindActionCreators } from 'redux';
 import Head from '../../components/layout/head'
-import { parseSearch } from '../../utils/index'
+// import { parseSearch } from '../../utils/index'
+import { cityGuess } from '../../service/index';
+// import { record } from '../../store/actions/address';
+
+// const mapStateToProps = dispatch => ({
+//   recordAdress: bindActionCreators(record, dispatch)
+// })
 
 export default class Msite extends Component {
   constructor(props) {
@@ -16,11 +23,19 @@ export default class Msite extends Component {
     }
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const { location } = this.props
-    this.setState({
-      geohash: parseSearch(location.search),
-    })
+    const { geohash } = location.query
+    if (!geohash) {
+      const address = await cityGuess()
+      this.setState({
+        geohash: `${address.latitude},${address.longitude}`,
+      })
+    } else {
+      this.setState({
+        geohash,
+      })
+    }
   }
 
   render() {
